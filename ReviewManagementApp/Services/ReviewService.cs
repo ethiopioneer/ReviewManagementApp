@@ -65,17 +65,20 @@ namespace ReviewManagementApp.Services
 
                 var results = sortQuery(query, searchParameters);
 
-                var total = results.Select(p => p.ReviewId).Count();
+                int total = results.Select(p => p.ReviewId).Count();
 
-                var pageSize = 5; 
+                int pageSize = 5;
 
-                var page = searchParameters.Page; // set current page number, must be >= 1
+                int pageCount = (total + pageSize - 1) / pageSize;
 
-                var skip = pageSize * (page - 1);
+                int page = searchParameters.Page; // set current page number, must be >= 1
+
+                int skip = pageSize * (page - 1);
 
                 searchParameters.HasPrevious = page > 1;
                 searchParameters.HasNext = total > (pageSize * page);
-                
+                searchParameters.PageCount = pageCount;
+
                 var canPage = skip < total;
 
                 if (!canPage) // do what you wish if you can page no further

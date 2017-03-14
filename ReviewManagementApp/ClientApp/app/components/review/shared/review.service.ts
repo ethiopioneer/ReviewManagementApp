@@ -25,7 +25,8 @@ export class ReviewService
             sortByTitle : false,
             sortByRating : false,
             isAscending : false,
-            page : 1
+            page: 1,
+            pageCount: 1
         };
         
 
@@ -36,6 +37,14 @@ export class ReviewService
 
         this.options = new RequestOptions({ headers: this.headers });
 
+    }
+
+    getCurrentPage() {
+        return this.searchParameters.page;
+    }
+
+    getPageCount() {
+        return this.searchParameters.pageCount;
     }
 
     getReviews(): Observable<IReview[]> {
@@ -52,7 +61,9 @@ export class ReviewService
                 let params = response.json().searchParameters as SearchParameters;
 
                 this.searchParameters.hasNext = params.hasNext;
-                this.searchParameters.hasPrevious = params.hasNext;
+                this.searchParameters.hasPrevious = params.hasPrevious;
+                this.searchParameters.page = params.page;
+                this.searchParameters.pageCount = params.pageCount;
 
                 return response.json().reviews as IReview[];
             })
@@ -94,6 +105,8 @@ export class ReviewService
 
                 this.searchParameters.hasNext = params.hasNext;
                 this.searchParameters.hasPrevious = params.hasPrevious;
+                this.searchParameters.page = params.page;
+                this.searchParameters.pageCount = params.pageCount;
 
                 return response.json().reviews as IReview[];
             })
@@ -101,6 +114,7 @@ export class ReviewService
             .catch(this.handleError);
 
     }
+
     sort(sortBy: string): Observable<IReview[]> {
         this.searchParameters.isAscending = !this.searchParameters.isAscending;
 
@@ -118,6 +132,8 @@ export class ReviewService
 
                 this.searchParameters.hasNext = params.hasNext;
                 this.searchParameters.hasPrevious = params.hasPrevious;
+                this.searchParameters.page = params.page;
+                this.searchParameters.pageCount = params.pageCount;
 
                 return response.json().reviews as IReview[];
             })

@@ -8,4 +8,5 @@
     sortByTitle: boolean;
     isAscending: boolean;
     page: number;
+    pageCount: number;
 }
