@@ -1,0 +1,71 @@
+﻿.review {
+    padding: 10px 13px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.reinfo {
+    width: 38%;
+    float: left;
+    margin-right: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    color: #666;
+    margin: 3px 0px;
+    padding: 3px 0px;
+}
+
+.redetails {
+    width: 53%;
+    float: left;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.redetails h5 {
+    text-transform: uppercase;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+.redetails .progress {
+    height: 8px;
+    margin: 6px 0px;
+}
+
+.rgood {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 43.5%;
+    float: left;
+    background: #eee;
+}
+
+.rbad {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 43.5%;
+    float: left;
+    background: #eee;
+}
+
+.pager {
+    padding-left: 0;
+    margin: 0px;
+    text-align: center;
+    list-style: none;
+}

@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h4>Reviews</h4>
+                        
+                    </div>
+                    <div class="col-md-10">
+                        <button (click)="sortByDate()" class="btn btn-primary btn-sm" type="button">Sort by Date</button>
+                        <button (click)="sortByReviewer()" class="btn btn-primary btn-sm" type="button">Sort by Reviewer</button>
+                        <button (click)="sortByRating()" class="btn btn-primary btn-sm" type="button">Sort by Rating</button>
+                        <button (click)="sortByTitle()" class="btn btn-primary btn-sm" type="button">Sort by Title</button>
+                        <div class="pager pull-right">
+                            <button [disabled]="!reviewService.hasPrevious()" (click)="getPreviousPage()" class="btn btn-primary btn-sm" type="button">Previous</button>
+                            <button [disabled]="!reviewService.hasNext()"  (click)="getNextPage()" class="btn btn-primary btn-sm" type="button">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <p *ngIf="!reviews"><em>Loading...</em></p>
+
+                <review-item *ngFor="let review of reviews" [review]="review"></review-item>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

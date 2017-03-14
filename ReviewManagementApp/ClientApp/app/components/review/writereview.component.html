@@ -1,0 +1,130 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title">Write Review</h3>
+            </div>
+            <div class="panel-body">
+                <form  #reviewForm="ngForm" 
+                      (ngSubmit)="save(reviewForm.value)" 
+                      class="form-horizontal"
+                      novalidate>
+
+                    <div class="form-group">
+
+                        <label class="control-label">You Name</label>
+                        <em *ngIf="reviewForm.controls.reviewer?.invalid">Required</em>
+                        <input (ngModel)="reviewer" name="reviewer" type="text" placeholder="You Name..." class="form-control" required>
+
+                      
+                    </div>
+                    <div class="line-dashed"></div>
+                    <div class="form-group">
+                        <label class="control-label">Short Description</label>
+                        <em *ngIf="reviewForm.controls.title?.invalid">Required</em>
+                        <input (ngModel)="title" name="title" type="text" placeholder="Short Description..." class="form-control" required>
+
+                    </div>
+                    <div class="line-dashed"></div>
+                    <div class="form-group">
+                        <label class="control-label">Detail</label>
+                        <em *ngIf="reviewForm.controls.detail?.invalid">Required</em>
+                        <textarea (ngModel)="detail" name="detail" placeholder="Detail..." class="form-control" required></textarea>
+
+                    </div>
+                    <div class="line-dashed"></div>
+                    <div class="form-group">
+                        <label class="control-label">Pros</label>
+                        <textarea (ngModel)="pros" name="pros" placeholder="Pros..." class="form-control"></textarea>
+
+                    </div>
+                    <div class="line-dashed"></div>
+                    <div class="form-group">
+                        <label class="control-label">Cons</label>
+                        <textarea (ngModel)="cons" name="cons" placeholder="Cons..." class="form-control"></textarea>
+                    </div>
+                    <div class="line-dashed"></div>
+                    <div class="form-group">
+                        <label class="control-label">Rating</label>
+                        <div>
+                            <fieldset class="rating">
+                                <input (ngModel)="star5" name="star5" type="radio" id="star5" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input (ngModel)="star4" name="star4" type="radio" id="star4" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input (ngModel)="star3" name="star3" type="radio" id="star3" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input (ngModel)="star2" name="star2" type="radio" id="star2" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input (ngModel)="star1" name="star1" type="radio" id="star1" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="line-dashed"></div>
+
+                    <div class="form-group">
+                        <div class="">
+                            <button class="btn btn-default" type="submit" [disabled]="reviewForm.invalid">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none;">
+    <div class="row" style="padding: 5px;">
+        <div class="col-md-6">
+            reviewForm.controls.reviewer.valid :<br />
+            reviewForm.controls.reviewer.invalid :<br />
+            reviewForm.controls.reviewer.dirty :<br />
+            reviewForm.controls.reviewer.pristine :<br />
+            reviewForm.controls.reviewer.touched :<br />
+            reviewForm.controls.reviewer.untouched :<br />
+
+        </div>
+        <div class="col-md-6">
+            {{reviewForm.controls.reviewer?.valid}} <br />
+            {{reviewForm.controls.reviewer?.invalid}} <br />
+            {{reviewForm.controls.reviewer?.dirty}} <br />
+            {{reviewForm.controls.reviewer?.pristine}} <br />
+            {{reviewForm.controls.reviewer?.touched}} <br />
+            {{reviewForm.controls.reviewer?.untouched}} <br />
+        </div>
+    </div>
+    <div class="row" style="padding: 5px;">
+        <div class="col-md-6">
+            reviewForm.controls.title.valid :<br />
+            reviewForm.controls.title.invalid :<br />
+            reviewForm.controls.title.dirty :<br />
+            reviewForm.controls.title.pristine :<br />
+            reviewForm.controls.title.touched :<br />
+            reviewForm.controls.title.untouched :<br />
+
+        </div>
+        <div class="col-md-6">
+            {{reviewForm.controls.title?.valid}} <br />
+            {{reviewForm.controls.title?.invalid}} <br />
+            {{reviewForm.controls.title?.dirty}} <br />
+            {{reviewForm.controls.title?.pristine}} <br />
+            {{reviewForm.controls.title?.touched}} <br />
+            {{reviewForm.controls.title?.untouched}} <br />
+        </div>
+    </div>
+
+    <div class="row" style="padding: 5px;">
+        <div class="col-md-6">
+            reviewForm.valid :<br />
+            reviewForm.invalid :<br />
+            reviewForm.dirty :<br />
+            reviewForm.pristine :<br />
+            reviewForm.touched :<br />
+            reviewForm.untouched :<br />
+
+        </div>
+        <div class="col-md-6">
+            {{reviewForm?.valid}} <br />
+            {{reviewForm?.invalid}} <br />
+            {{reviewForm?.dirty}} <br />
+            {{reviewForm?.pristine}} <br />
+            {{reviewForm?.touched}} <br />
+            {{reviewForm?.untouched}} <br />
+        </div>
+    </div>
+</div>

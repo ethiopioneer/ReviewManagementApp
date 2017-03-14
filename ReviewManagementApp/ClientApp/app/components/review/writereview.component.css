@@ -1,0 +1,208 @@
+﻿/* Panels
+   ========================================================================== */
+
+.panel {
+  margin-bottom: 25px;
+}
+
+.panel-minimal > .panel-heading  {
+	border-color: #ddd;
+}
+
+.panel-minimal > .panel-heading,
+.panel-minimal > .panel-body {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.panel-minimal > .panel-heading > .nav-right {
+	float: right;
+	margin: -1px 0 -13px;
+}
+
+.panel-minimal > .panel-heading > .nav-tabs > li > a {
+	padding: 6px 15px;
+}
+
+.minimal .panel-body {
+	padding: 15px;
+}
+
+.panel-group .panel + .panel {
+	margin-top: 0;
+}
+
+.panel-heading, .panel-body {
+	padding: 12px 24px;
+}
+
+.panel-body  .form-horizontal,
+.panel-body  .form-group
+{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.minimal .panel-heading {
+	padding: 10px 15px;
+}
+
+.panel-heading > .panel-title {
+    float: left;
+	font-size: 14px;
+}
+
+.panel-heading > .panel-title-center {
+	font-size: 18px;
+	display: inline-block;
+	margin: 5px 10px 0;
+}
+
+.panel-heading > h2.panel-title {
+	font-size: 24px;
+}
+
+.panel-heading > h3.panel-title {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.panel-heading .panel-tool-options {
+	float: right;
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0;
+	margin-right: -0.5em;
+}
+
+.panel-heading .panel-tool-options > li > a {
+	color: #434343;
+}
+
+.panel-success .panel-tool-options > li > a,
+.panel-primary .panel-tool-options > li > a,
+.panel-danger .panel-tool-options > li > a,
+.panel-warning .panel-tool-options > li > a,
+.panel-info .panel-tool-options > li > a {
+	color: inherit;
+}
+
+.panel-heading .panel-tool-options > li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-heading .panel-tool-options .dropdown-menu > li > a {
+	padding: 5px 12px;
+}
+
+.minimal .panel-heading .panel-tool-options {
+	margin-right: -0.25em;
+}
+
+.panel-default > .panel-heading {
+	background-color: #FFF;
+}
+
+.panel-invert { 
+	color: #FFF;
+}
+
+.panel-invert > .panel-heading { 
+	color: #FFF;
+}
+
+.panel-content.panel-content {
+	padding-top: 0;
+}
+
+.panel-content.panel-content  h1 { margin-bottom: 5px; }
+
+.panel > .panel-body.with-table {
+    border: 0 none;
+    margin: -1px;
+    padding: 0;
+}
+
+.panel-body.with-table .table { margin-bottom: 0; }
+
+.panel-update-content {
+	padding: 8px 15px;
+	font-weight: 600;
+	color: #9ea7b3;
+}
+
+.panel-update-content h5 {
+	font-weight: 600;
+}
+
+.panel-update-content h1 {
+	color: #00b8ce;
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 1;
+	margin-bottom: 8px;
+}
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+em {
+    float: right;
+    color: #e05c65;
+    padding-right: 20px;
+}
+

@@ -44,10 +44,6 @@ Obj/
 *.VisualState.xml
 TestResult.xml
 
-#LocalDB
-*.VC.db
-*.VC.VC.opendb
-
 # Build Results of an ATL Project
 [Dd]ebugPS/
 [Rr]eleasePS/
