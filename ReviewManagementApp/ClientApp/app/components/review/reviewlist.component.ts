@@ -64,7 +64,5 @@ export class ReviewListComponent implements OnInit {
         )
     }
 
-    handleClickMe(){
-        alert(1);
-    }
+
 }
