@@ -6,6 +6,6 @@ To run the app, go to the ReviewManagementApp in command tool and run "dotnet ru
 
 I used LiteDB for local storage 
 
-https://github.com/mbdavid/LiteDB.git
+Local database: https://github.com/mbdavid/LiteDB.git
 
-temporary demo is http://reviewmanagement.azurewebsites.net
+DEMO: http://reviewmanagement.azurewebsites.net
